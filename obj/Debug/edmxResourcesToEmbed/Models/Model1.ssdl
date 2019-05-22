@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="bID" />
+    </Key>
+    <Property Name="bID" Type="int" Nullable="false" />
+    <Property Name="bName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="bCode" Type="int" Nullable="false" />
+    <Property Name="pID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="pID" />
+    </Key>
+    <Property Name="pID" Type="int" Nullable="false" />
+    <Property Name="pname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pcode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="wID" />
+    </Key>
+    <Property Name="wID" Type="int" Nullable="false" />
+    <Property Name="wName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pID" Type="int" Nullable="false" />
+    <Property Name="bID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Branch_ToTable">
+    <End Role="Province" Type="Self.Province" Multiplicity="1" />
+    <End Role="Branch" Type="Self.Branch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="pID" />
+      </Principal>
+      <Dependent Role="Branch">
+        <PropertyRef Name="pID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Worker_ToTable">
+    <End Role="Province" Type="Self.Province" Multiplicity="1" />
+    <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="pID" />
+      </Principal>
+      <Dependent Role="Worker">
+        <PropertyRef Name="pID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Worker_ToTable_1">
+    <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
+    <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch">
+        <PropertyRef Name="bID" />
+      </Principal>
+      <Dependent Role="Worker">
+        <PropertyRef Name="bID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Province" EntityType="Self.Province" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Branch_ToTable" Association="Self.FK_Branch_ToTable">
+      <End Role="Province" EntitySet="Province" />
+      <End Role="Branch" EntitySet="Branch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Worker_ToTable" Association="Self.FK_Worker_ToTable">
+      <End Role="Province" EntitySet="Province" />
+      <End Role="Worker" EntitySet="Worker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Worker_ToTable_1" Association="Self.FK_Worker_ToTable_1">
+      <End Role="Branch" EntitySet="Branch" />
+      <End Role="Worker" EntitySet="Worker" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

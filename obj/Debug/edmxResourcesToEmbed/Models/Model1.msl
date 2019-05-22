@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="Database1Model.Branch">
+        <MappingFragment StoreEntitySet="Branch">
+          <ScalarProperty Name="bID" ColumnName="bID" />
+          <ScalarProperty Name="bName" ColumnName="bName" />
+          <ScalarProperty Name="bCode" ColumnName="bCode" />
+          <ScalarProperty Name="pID" ColumnName="pID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provinces">
+      <EntityTypeMapping TypeName="Database1Model.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="pname" ColumnName="pname" />
+          <ScalarProperty Name="pcode" ColumnName="pcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="Database1Model.Worker">
+        <MappingFragment StoreEntitySet="Worker">
+          <ScalarProperty Name="wID" ColumnName="wID" />
+          <ScalarProperty Name="wName" ColumnName="wName" />
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="bID" ColumnName="bID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
