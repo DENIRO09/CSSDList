@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CSSDROPLIST.Models.Branch>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Province.pname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Province.pname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.bID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.bID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.bID })
+        </td>
+    </tr>
+}
+
+</table>

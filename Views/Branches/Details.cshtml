@@ -1,0 +1,42 @@
+﻿@model CSSDROPLIST.Models.Branch
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Branch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Province.pname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Province.pname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.bID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

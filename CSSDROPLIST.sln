@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSSDROPLIST", "CSSDROPLIST\CSSDROPLIST.csproj", "{A0E7D4F1-0897-4366-BAF7-79A401644AA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSSDROPLIST.Tests", "CSSDROPLIST.Tests\CSSDROPLIST.Tests.csproj", "{BC8C231A-FACD-48F4-B779-4F55675897BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0E7D4F1-0897-4366-BAF7-79A401644AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E7D4F1-0897-4366-BAF7-79A401644AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E7D4F1-0897-4366-BAF7-79A401644AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E7D4F1-0897-4366-BAF7-79A401644AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC8C231A-FACD-48F4-B779-4F55675897BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8C231A-FACD-48F4-B779-4F55675897BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8C231A-FACD-48F4-B779-4F55675897BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8C231A-FACD-48F4-B779-4F55675897BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

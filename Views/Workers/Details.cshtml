@@ -1,0 +1,42 @@
+﻿@model CSSDROPLIST.Models.Worker
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.wName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.wName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch.bName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch.bName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Province.pname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Province.pname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.wID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

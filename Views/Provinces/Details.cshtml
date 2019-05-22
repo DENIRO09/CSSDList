@@ -1,0 +1,34 @@
+﻿@model CSSDROPLIST.Models.Province
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Province</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pcode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
